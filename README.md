@@ -56,7 +56,7 @@ lib/
 
 ## GitHub Repository
 
-- **Repository**: [https://github.com/Bajithan/quickbite_app](https://github.com/Bajithan/quickbite_app)
+- **Repository**: [https://github.com/Bajithan/QuickBite](https://github.com/Bajithan/QuickBite)
 - **Author**: Bajithan Sivathasan
 - **Branch**: `main`
 
@@ -66,6 +66,5 @@ lib/
 
 - [x] Full source code adhering to guidelines
 - [x] Responsive layout tested on phone and tablet dimensions
-- [x] All amounts and currency displayed in **LKR**
 - [x] Test log table (`test_log.md`) with 8 passing test cases
 - [x] Git commit history following Conventional Commits format
