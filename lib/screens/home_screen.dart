@@ -200,19 +200,22 @@ class _HomeScreenState extends State<HomeScreen> {
                         )
                       : LayoutBuilder(
                           builder: (context, constraints) {
-                            // Responsive column count based on available width
+                            // Responsive column count and aspect ratio based on available width
                             int crossAxisCount = 2;
+                            double childAspectRatio = 0.56;
                             if (constraints.maxWidth > 900) {
                               crossAxisCount = 4;
+                              childAspectRatio = 0.72;
                             } else if (constraints.maxWidth > 600) {
                               crossAxisCount = 3;
+                              childAspectRatio = 0.65;
                             }
 
                             return GridView.builder(
                               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: crossAxisCount,
-                                childAspectRatio: 0.68,
+                                childAspectRatio: childAspectRatio,
                                 crossAxisSpacing: 14,
                                 mainAxisSpacing: 14,
                               ),
