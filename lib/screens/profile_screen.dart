@@ -118,10 +118,10 @@ class ProfileScreen extends StatelessWidget {
                           ),
                           const SizedBox(height: 12),
                           const Text(
-                            '\$45.50',
+                            'LKR 4,500.00',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 28,
+                              fontSize: 24,
                               fontWeight: FontWeight.w900,
                             ),
                           ),
@@ -242,12 +242,17 @@ class ProfileScreen extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(
-                                    '${order.items.length} items • ${order.pickupLocation}',
-                                    style: const TextStyle(fontSize: 12, color: AppTheme.textSecondary),
+                                  Expanded(
+                                    child: Text(
+                                      '${order.items.length} items • ${order.pickupLocation}',
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: const TextStyle(fontSize: 12, color: AppTheme.textSecondary),
+                                    ),
                                   ),
+                                  const SizedBox(width: 8),
                                   Text(
-                                    '\$${order.total.toStringAsFixed(2)}',
+                                    AppTheme.formatPrice(order.total),
                                     style: const TextStyle(
                                       fontWeight: FontWeight.w800,
                                       fontSize: 15,

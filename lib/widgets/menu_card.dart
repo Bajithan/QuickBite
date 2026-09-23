@@ -150,9 +150,9 @@ class MenuCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '\$${item.price.toStringAsFixed(2)}',
+                        AppTheme.formatPrice(item.price),
                         style: const TextStyle(
-                          fontSize: 17,
+                          fontSize: 15,
                           fontWeight: FontWeight.w800,
                           color: AppTheme.primary,
                         ),

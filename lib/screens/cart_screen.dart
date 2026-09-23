@@ -142,7 +142,7 @@ class CartScreen extends StatelessWidget {
                                 style: const TextStyle(fontSize: 14, color: AppTheme.textSecondary),
                               ),
                               Text(
-                                '\$${cart.subtotal.toStringAsFixed(2)}',
+                                AppTheme.formatPrice(cart.subtotal),
                                 style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
                               ),
                             ],
@@ -156,7 +156,7 @@ class CartScreen extends StatelessWidget {
                                 style: TextStyle(fontSize: 14, color: AppTheme.textSecondary),
                               ),
                               Text(
-                                '\$${cart.tax.toStringAsFixed(2)}',
+                                AppTheme.formatPrice(cart.tax),
                                 style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
                               ),
                             ],
@@ -192,9 +192,9 @@ class CartScreen extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                '\$${cart.total.toStringAsFixed(2)}',
+                                AppTheme.formatPrice(cart.total),
                                 style: const TextStyle(
-                                  fontSize: 22,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.w900,
                                   color: AppTheme.primary,
                                 ),

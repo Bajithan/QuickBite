@@ -138,7 +138,7 @@ class OrderConfirmationScreen extends StatelessWidget {
                           children: [
                             const Text('Total Paid', style: TextStyle(color: AppTheme.textSecondary)),
                             Text(
-                              '\$${totalAmount.toStringAsFixed(2)}',
+                              AppTheme.formatPrice(totalAmount),
                               style: const TextStyle(
                                 fontWeight: FontWeight.w800,
                                 fontSize: 16,

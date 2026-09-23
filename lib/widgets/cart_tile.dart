@@ -59,7 +59,7 @@ class CartTile extends StatelessWidget {
                   ),
                   const SizedBox(height: 2),
                   Text(
-                    '\$${item.price.toStringAsFixed(2)} each',
+                    '${AppTheme.formatPrice(item.price)} each',
                     style: const TextStyle(
                       fontSize: 12,
                       color: AppTheme.textSecondary,
@@ -81,7 +81,7 @@ class CartTile extends StatelessWidget {
                     ),
                   const SizedBox(height: 4),
                   Text(
-                    '\$${cartItem.totalPrice.toStringAsFixed(2)}',
+                    AppTheme.formatPrice(cartItem.totalPrice),
                     style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w800,

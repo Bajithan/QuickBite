@@ -30,7 +30,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     {
       'id': 'Campus Dining Card',
       'title': 'Campus Dining Card',
-      'subtitle': 'Balance: \$45.50 • ID #4192',
+      'subtitle': 'Balance: LKR 4,500.00 • ID #4192',
       'icon': Icons.credit_card,
     },
     {
@@ -260,7 +260,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text('Items Subtotal:', style: TextStyle(color: AppTheme.textSecondary)),
-                          Text('\$${cart.subtotal.toStringAsFixed(2)}', style: const TextStyle(fontWeight: FontWeight.w600)),
+                          Text(AppTheme.formatPrice(cart.subtotal), style: const TextStyle(fontWeight: FontWeight.w600)),
                         ],
                       ),
                       const SizedBox(height: 6),
@@ -268,7 +268,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text('Campus Tax (5%):', style: TextStyle(color: AppTheme.textSecondary)),
-                          Text('\$${cart.tax.toStringAsFixed(2)}', style: const TextStyle(fontWeight: FontWeight.w600)),
+                          Text(AppTheme.formatPrice(cart.tax), style: const TextStyle(fontWeight: FontWeight.w600)),
                         ],
                       ),
                       const SizedBox(height: 6),
@@ -288,9 +288,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                             style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800),
                           ),
                           Text(
-                            '\$${cart.total.toStringAsFixed(2)}',
+                            AppTheme.formatPrice(cart.total),
                             style: const TextStyle(
-                              fontSize: 20,
+                              fontSize: 18,
                               fontWeight: FontWeight.w900,
                               color: AppTheme.primary,
                             ),
@@ -311,7 +311,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                   children: [
                     const Icon(Icons.check_circle_outline, size: 20),
                     const SizedBox(width: 8),
-                    Text('Place Order • \$${cart.total.toStringAsFixed(2)}'),
+                    Text('Place Order • ${AppTheme.formatPrice(cart.total)}'),
                   ],
                 ),
               ),

@@ -172,8 +172,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                       ),
                       const SizedBox(height: 24),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      Wrap(
+                        alignment: WrapAlignment.center,
+                        crossAxisAlignment: WrapCrossAlignment.center,
                         children: const [
                           Icon(Icons.verified_user_outlined, size: 16, color: AppTheme.textSecondary),
                           SizedBox(width: 6),

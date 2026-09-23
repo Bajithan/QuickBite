@@ -139,9 +139,9 @@ class _ItemDetailScreenState extends State<ItemDetailScreen> {
                       ),
                       const SizedBox(width: 12),
                       Text(
-                        '\$${item.price.toStringAsFixed(2)}',
+                        AppTheme.formatPrice(item.price),
                         style: const TextStyle(
-                          fontSize: 24,
+                          fontSize: 22,
                           fontWeight: FontWeight.w900,
                           color: AppTheme.primary,
                         ),
@@ -310,7 +310,7 @@ class _ItemDetailScreenState extends State<ItemDetailScreen> {
                     children: [
                       const Icon(Icons.shopping_bag_outlined, size: 20),
                       const SizedBox(width: 8),
-                      Text('Add to Cart • \$${totalPrice.toStringAsFixed(2)}'),
+                      Text('Add to Cart • ${AppTheme.formatPrice(totalPrice)}'),
                     ],
                   ),
                 ),

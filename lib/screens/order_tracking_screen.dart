@@ -319,12 +319,17 @@ class OrderTrackingScreen extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                '${cartItem.quantity} × ${cartItem.item.name}',
-                                style: const TextStyle(fontSize: 13),
+                              Expanded(
+                                child: Text(
+                                  '${cartItem.quantity} × ${cartItem.item.name}',
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(fontSize: 13),
+                                ),
                               ),
+                              const SizedBox(width: 8),
                               Text(
-                                '\$${cartItem.totalPrice.toStringAsFixed(2)}',
+                                AppTheme.formatPrice(cartItem.totalPrice),
                                 style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
                               ),
                             ],
@@ -337,7 +342,7 @@ class OrderTrackingScreen extends StatelessWidget {
                         children: [
                           const Text('Total Paid:', style: TextStyle(fontWeight: FontWeight.w700)),
                           Text(
-                            '\$${activeOrder.total.toStringAsFixed(2)}',
+                            AppTheme.formatPrice(activeOrder.total),
                             style: const TextStyle(fontWeight: FontWeight.w900, color: AppTheme.primary, fontSize: 16),
                           ),
                         ],

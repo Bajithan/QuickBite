@@ -1,0 +1,11 @@
+{
+  "name": "QuickBite – Campus Food Ordering",
+  "short_name": "QuickBite",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#FF6600",
+  "theme_color": "#FF6600",
+  "description": "Campus Food Ordering in Minutes",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}

@@ -13,6 +13,10 @@ class AppTheme {
   static const Color textSecondary = Color(0xFF64748B); // Slate Grey
   static const Color border = Color(0xFFE2E8F0);
 
+  // Currency Formatter for Sri Lankan Rupees
+  static const String currency = 'LKR ';
+  static String formatPrice(double price) => 'LKR ${price.toStringAsFixed(2)}';
+
   static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
